@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 
 export default function App() {
  //code here 
+ const [click, setClick] = useState(0);
+ 
 
  
   return (
@@ -13,8 +15,8 @@ export default function App() {
   <input id='text' value={inputValue} onChange={changeInput} />
   
       <p id='intro'>Concated String</p>
-      <p id='text'>{text} </p>
-      <button id='button' onClick={buttonClick}>
+      <p> you clicked {click} times </p>
+      <button onClick = {() => setClick(click + 1)
         Click me
       </button>
     </div>
